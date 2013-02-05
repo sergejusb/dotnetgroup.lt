@@ -9,10 +9,9 @@ html(lang="en")
 
     link(rel="shortcut icon", href="/favicon.ico")
 
-    link(href="/Public/css/bootstrap.min.css", rel="stylesheet", media="screen")
+    link(href="/public/css/bootstrap.min.css", rel="stylesheet", media="screen")
 
     style
-
       #logo {
         position: relative;
         top: -1em;
@@ -25,7 +24,6 @@ html(lang="en")
       }
 
     script
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-2241822-3']);
       _gaq.push(['_setDomainName', 'dotnetgroup.lt']);
@@ -39,5 +37,5 @@ html(lang="en")
 
 
   body(id="home")
-    .container
+    div.container
       block content
