@@ -1,0 +1,10 @@
+{
+  "name": "dotnetgroup.lt",
+  "description": "Lithuanian .net user group Web page",
+  "version": "0.1.0",
+  "private": "true",
+  "dependencies": {
+    "express": "~3.1.0",
+    "jade": "~0.28.1"
+  }
+}
