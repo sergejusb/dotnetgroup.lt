@@ -69,3 +69,17 @@ block content
   div.page-header(id="events")
     h1 &nbsp;
     h1 Susitikimai
+
+  ul.thumbnails
+    each event in events
+      each meeting in event.meetup
+        li.span4
+          div.thumbnail
+            h3(id="#{meeting.location.city}#{meeting.no}") #{meeting.name}
+            p #{meeting.date}, daugiau informacijos: 
+              a(href="#{meeting.registration}", target="_blank") Eventbrite
+            each presenter in event.presenters
+              p
+                a(href="#{presenter.info.linkedin}", target="_blank") #{presenter.name}
+                br
+                a(href="#{presenter.presentation.slides}", target="_blank") #{presenter.presentation.title}

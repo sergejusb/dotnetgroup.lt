@@ -2,7 +2,8 @@
   {
     "meetup": [
       {
-        "name": "#19",
+        "no": "19",
+        "name": "Susitikimas Vilniuje #19",
         "location": {
           "city": "Vilnius"
         },
@@ -10,7 +11,8 @@
         "registration": "http://ltnet19v.eventbrite.com"
       },
       {
-        "name": "#15",
+        "no": "15",
+        "name": "Susitikimas Kaune #15",
         "location": {
           "city": "Kaunas"
         },
@@ -36,7 +38,7 @@
         },
         "presentation": {
           "title": "Windows 8: Designing the Metro Experience",
-          "slides": "http://slides:hare.net/vjmessyman/designing-the-metro-experience"
+          "slides": "http://slideshare.net/vjmessyman/designing-the-metro-experience"
         }
       }
     ]
@@ -44,7 +46,8 @@
   {
     "meetup": [
       {
-        "name": "#18",
+        "no": "18",
+        "name": "Susitikimas Vilniuje #18",
         "location": {
           "city": "Vilnius"
         },
@@ -52,7 +55,8 @@
         "registration": "http://ltnet18v.eventbrite.com"
       },
       {
-        "name": "#14",
+        "no": "14",
+        "name": "Susitikimas Kaune #14",
         "location": {
          "city": "Kaunas"
         },
@@ -86,7 +90,8 @@
   {
     "meetup": [
       {
-        "name": "#13",
+        "no": "13",
+        "name": "Susitikimas Kaune #13",
         "location": {
           "city": "Kaunas"
         },
@@ -94,7 +99,8 @@
         "registration": "http://ltnet13k.eventbrite.com"
       },
       {
-        "name": "#17",
+        "no": "17",
+        "name": "Susitikimas Vilniuje #17",
         "location": {
           "city": "Vilnius"
         },
@@ -128,7 +134,8 @@
   {
     "meetup": [
       {
-        "name": "#12",
+        "no": "12",
+        "name": "Susitikimas Kaune #12",
         "location": {
           "city": "Kaunas"
         },
@@ -136,7 +143,8 @@
         "registration": "http://ltnet12k.eventbrite.com"
       },
       {
-        "name": "#16",
+        "no": "16",
+        "name": "Susitikimas Vilniuje #16",
         "location": {
           "city": "Vilnius"
         },
@@ -170,7 +178,7 @@
   {
     "meetup": [
       {
-        "name": "#15",
+        "name": "Susitikimas Vilniuje #15",
         "location": {
           "city": "Vilnius"
         },
@@ -178,7 +186,7 @@
         "registration": "http://ltnet15v.eventbrite.com"
       },
       {
-        "name": "#11",
+        "name": "Susitikimas Kaune #11",
         "location": {
           "city": "Kaunas"
         },
