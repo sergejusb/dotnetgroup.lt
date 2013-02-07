@@ -178,6 +178,7 @@
   {
     "events": [
       {
+        "no": "15",
         "name": "Susitikimas Vilniuje #15",
         "location": {
           "city": "Vilnius"
@@ -186,6 +187,7 @@
         "registration": "http://ltnet15v.eventbrite.com"
       },
       {
+        "no": "16",
         "name": "Susitikimas Kaune #11",
         "location": {
           "city": "Kaunas"
