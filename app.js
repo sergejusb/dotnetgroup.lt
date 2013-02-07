@@ -22,7 +22,8 @@ app.configure(function() {
   app.use(express.compress());
   app.use(express.cookieParser());
   app.use(express.bodyParser());
-  app.use("/public", express.static(__dirname + "/public"));
+  app.use(express.staticCache());
+  app.use("/public", express.static(__dirname + "/public", {maxAge: 86400000}));
 });
 
 app.locals.title = "Lietuvos .net naudotojų grupė";
