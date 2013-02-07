@@ -1,1 +1,1 @@
-Lithuanian .net user group Web page
+Official Lithuanian .net user group Web page

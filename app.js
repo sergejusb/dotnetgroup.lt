@@ -31,6 +31,10 @@ app.get("/", function(req, res) {
   res.render("index", { "events" : model.events });
 });
 
+app.get("/stream", function(req, res) {
+  res.redirect("//stream.dotnetgroup.lt");
+});
+
 app.get("/debug", function(req, res) {
   var info = {
     "env" : app.get("env"),
