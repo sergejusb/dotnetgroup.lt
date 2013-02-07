@@ -5,6 +5,15 @@ var model = {
   "events": require('./models/events.js')
 };
 
+app.configure("development", function() {
+  //app.use(express.logger());
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+});
+
+app.configure("production", function() {
+  app.use(express.errorHandler());
+});
+
 app.configure(function() {
   app.set("port", process.env.PORT || 3000);
   app.set("views", __dirname + "/views");
@@ -22,4 +31,12 @@ app.get("/", function(req, res) {
   res.render("index", { "events" : model.events });
 });
 
-http.createServer(app).listen(app.get('port'));
+app.get("/debug", function(req, res) {
+  var info = {
+    "env" : app.get("env"),
+    "model" : model
+  };
+  res.send(info);
+});
+
+http.createServer(app).listen(app.get("port"));

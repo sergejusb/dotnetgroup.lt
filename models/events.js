@@ -4,14 +4,28 @@ var moment = require("moment");
 var pastEvents = [];
 var futureEvents = [];
 
-events.forEach(function(ev) {
-  ev.meetup.forEach(function(m) {
-  	m.code = m.no + m.location.city.toLowerCase()[0];
-  	m.date = moment(m.date).format("YYYY-MM-DD HH:mm");
-  	if (!m.registration) {
-  		m.registration = "http://ltnet" + m.code + ".eventbrite.com";
+var now = moment();
+events.forEach(function(globalEvent) {
+  globalEvent.events.forEach(function(localEvent) {
+  	var date = moment(localEvent.date);
+  	localEvent.presenters = globalEvent.presenters;
+  	localEvent.code = localEvent.no + localEvent.location.city.toLowerCase()[0];
+  	localEvent.date = date.format("YYYY-MM-DD HH:mm");
+  	localEvent.dateShort = date.format("YYYY-MM-DD");
+  	if (!localEvent.registration) {
+  	  localEvent.registration = "http://ltnet" + localEvent.code + ".eventbrite.com";
+  	}
+
+  	if (date >= now) {
+  	  futureEvents.push(localEvent);
+  	} else {
+  	  pastEvents.push(localEvent);
   	}
   });
+
 });
 
-module.exports = events;
+module.exports = {
+  "futureEvents" : futureEvents,
+  "pastEvents" : pastEvents
+};

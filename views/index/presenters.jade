@@ -1,0 +1,10 @@
+p
+  - if(presenter.info.linkedin)
+    a(href="#{presenter.info.linkedin}", target="_blank") #{presenter.name}
+  - else
+    span #{presenter.name}
+  br
+  - if(presenter.presentation.slides)
+    a(href="#{presenter.presentation.slides}", target="_blank") #{presenter.presentation.title}
+  - else
+    span #{presenter.presentation.title}

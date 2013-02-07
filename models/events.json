@@ -1,6 +1,6 @@
 [
   {
-    "meetup": [
+    "events": [
       {
         "no": "19",
         "name": "Susitikimas Vilniuje #19",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "meetup": [
+    "events": [
       {
         "no": "18",
         "name": "Susitikimas Vilniuje #18",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "meetup": [
+    "events": [
       {
         "no": "13",
         "name": "Susitikimas Kaune #13",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "meetup": [
+    "events": [
       {
         "no": "12",
         "name": "Susitikimas Kaune #12",
@@ -176,7 +176,7 @@
     ]
   },
   {
-    "meetup": [
+    "events": [
       {
         "name": "Susitikimas Vilniuje #15",
         "location": {

@@ -7,21 +7,21 @@ block content
   div.row
     div.span4
       h2 Artimiausi susitikimai
-      ul.unstyled
+      - if (events.futureEvents.length == 0)
         p.muted Sustikimai dar nėra suplanuoti :(
         p Galėtum padaryti pranešimą? 
           a(href="mailto:seriog@yahoo.com?subject=dotnetgroup-pranesejas") Pranešk mums!
+      - else
+        ul.unstyled
+          each event in events.futureEvents        
+            li
+              a(href="##{event.code}") #{event.dateShort} | #{event.name}
     div.span4
       h2 Ankstesni susitikimai
       ul.unstyled
-        li
-          a(href="#v19") 2013-01-31 | susitikimas Vilniuje #19
-        li
-          a(href="#k15") 2013-01-30 | susitikimas Kaune #15
-        li
-          a(href="#v18") 2012-10-17 | susitikimas Vilniuje #18
-        li
-          a(href="#k14") 2012-10-16 | susitikimas Kaune #14
+        each event in events.pastEvents.slice(0, 4)
+          li
+            a(href="##{event.code}") #{event.dateShort} | #{event.name}
       p
         a(href="#events") pilnas sąrašas &raquo;
     div.span4
@@ -71,15 +71,21 @@ block content
     h1 Susitikimai
 
   ul.thumbnails
-    each event in events
-      each meeting in event.meetup
-        li.span4
-          div.thumbnail
-            h3(id="#{meeting.code}") #{meeting.name}
-            p #{meeting.date}, daugiau informacijos: 
-              a(href="#{meeting.registration}", target="_blank") Eventbrite
-            each presenter in event.presenters
-              p
-                a(href="#{presenter.info.linkedin}", target="_blank") #{presenter.name}
-                br
-                a(href="#{presenter.presentation.slides}", target="_blank") #{presenter.presentation.title}
+    each event in events.futureEvents
+      li.span6
+        div.thumbnail
+          h3(id="{#event.code}") #{event.date} | #{event.name}
+          each presenter in event.presenters
+            include index/presenters
+          p(style="text-align:center")
+            a(href="#{event.registration}", target="_blank")
+              img(src="http://www.eventbrite.com/custombutton?eid=5250323860", alt="Eventbrite registracija")
+
+    each event in events.pastEvents
+      li.span4
+        div.thumbnail
+          h3(id="#{event.code}") #{event.name}
+          p #{event.date}, daugiau informacijos: 
+            a(href="#{event.registration}", target="_blank") Eventbrite
+          each presenter in event.presenters
+            include index/presenters
