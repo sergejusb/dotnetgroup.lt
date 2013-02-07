@@ -75,7 +75,7 @@ block content
       each meeting in event.meetup
         li.span4
           div.thumbnail
-            h3(id="#{meeting.location.city}#{meeting.no}") #{meeting.name}
+            h3(id="#{meeting.code}") #{meeting.name}
             p #{meeting.date}, daugiau informacijos: 
               a(href="#{meeting.registration}", target="_blank") Eventbrite
             each presenter in event.presenters

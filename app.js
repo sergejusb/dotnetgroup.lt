@@ -2,7 +2,7 @@ var http = require('http');
 var express = require('express');
 var app = express();
 var model = {
-  "events": require('./models/events')
+  "events": require('./models/events.js')
 };
 
 app.configure(function() {
