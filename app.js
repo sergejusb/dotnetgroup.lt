@@ -1,9 +1,7 @@
 var http = require('http');
 var express = require('express');
 var app = express();
-var model = {
-  "events": require('./models/events.js')
-};
+var routes = require('./routes');
 
 app.configure("development", function() {
   //app.use(express.logger());
@@ -22,26 +20,13 @@ app.configure(function() {
   app.use(express.compress());
   app.use(express.cookieParser());
   app.use(express.bodyParser());
-  app.use(express.staticCache());
   app.use("/public", express.static(__dirname + "/public", {maxAge: 86400000}));
 });
 
 app.locals.title = "Lietuvos .net naudotojų grupė";
 
-app.get("/", function(req, res) {
-  res.render("index", { "events" : model.events });
-});
-
-app.get("/stream", function(req, res) {
-  res.redirect("//stream.dotnetgroup.lt");
-});
-
-app.get("/debug", function(req, res) {
-  var info = {
-    "env" : app.get("env"),
-    "model" : model
-  };
-  res.send(info);
-});
+app.get("/", routes.home);
+app.get("/stream", routes.stream);
+app.get("/debug", routes.debug(app));
 
 http.createServer(app).listen(app.get("port"));
