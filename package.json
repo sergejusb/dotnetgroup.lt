@@ -8,6 +8,7 @@
     "express": "~3.1.0",
     "jade": "~0.28.1",
     "moment": "~1.7.2",
-    "require-directory": "~1.0.0"
+    "require-directory": "~1.0.0",
+    "rss": "0.0.4"
   }
 }

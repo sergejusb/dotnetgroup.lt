@@ -26,6 +26,7 @@ app.configure(function() {
 app.locals.title = "Lietuvos .net naudotojų grupė";
 
 app.get("/", routes.home);
+app.get("/rss.xml", routes.rss);
 app.get("/stream", routes.stream);
 app.get("/debug", routes.debug(app));
 
