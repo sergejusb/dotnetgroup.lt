@@ -2,6 +2,48 @@
   {
     "meetup": [
       {
+        "name": "#20",
+        "location": {
+          "city": "Vilnius"
+        },
+        "date": "2013-03-28T18:00:00",
+        "registration": "http://ltnet20v.eventbrite.com"
+      },
+      {
+        "name": "#16",
+        "location": {
+          "city": "Kaunas"
+        },
+        "date": "2013-03-27T18:00:00",
+        "registration": "http://ltnet16k.eventbrite.com"
+      }
+    ],
+    "presenters": [
+      {
+        "name": "Giedrius Banaitis",
+        "info": {
+          "linkedin": "http://www.linkedin.com/profile/view?id=8086518"
+        },
+        "presentation": {
+          "title": "įvadas į ServiceStack",
+          "slides": ""
+        }
+      },
+      {
+        "name": "Donatas Mačiūnas",
+        "info": {
+          "linkedin": "http://www.linkedin.com/profile/view?id=5807399"
+        },
+        "presentation": {
+          "title": "kaip veikia Git",
+          "slides": ""
+        }
+      }
+    ]
+  },
+  {
+    "meetup": [
+      {
         "name": "#19",
         "location": {
           "city": "Vilnius"
